@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body{ font: 14px sans-serif; }
+    .wrapper{
+    overflow: hidden;
+    max-width: 390px;
+    background:#f3f3f3;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+    }
+    .form-inner {
+    display: flex;
+    width: 200%;
+    }
+    .form-inner form .field {
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    }
+
+    .form-inner form .field input {
+        height: 100%;
+        width: 100%;
+        outline: none;
+        padding-left: 15px;
+        border-radius: 15px;
+        border: 1px solid lightgrey;
+        border-bottom-width: 3px;
+        font-size: 17px;
+        transition: all 0.3s ease;
+    }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+        <h2>Login</h2>
+
+    <div class="form-inner">
+                    <form action="login.php" class="login" method="LOGIN">
+                        <div class="field">
+                            <input id="text" type="text" placeholder="name" name="username" required>
+                        </div>
+                        <div class="field">
+                            <input id="text" type="password" placeholder="password" name="password" required>
+                        </div>
+                        <div class="pass-link"><a href="#">Forgot password?</a></div>
+                        <div class="field btn">
+                            <input type="submit" value="Login" name="LOGIN">
+                        </div>
+     
+      </div>
+</div>
+</body>
+</html>
