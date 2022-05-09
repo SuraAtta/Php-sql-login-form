@@ -1,0 +1,46 @@
+  <?php 
+session_start();
+
+
+include("functions.php");
+  
+//Connect to the database   
+$dbhost = "localhost";
+$dbuser = "root";
+$dbpass = "";
+$dbname = "login";  //database name 
+
+$con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+
+if($con) {
+ 	echo "success";
+}
+else {
+	die("Error". mysqli_connect_error());
+}
+
+
+		//something was posted
+		$username = $_POST['username'];
+       
+    $password = $_POST['password'];
+         
+  
+      $query = "Select * from users where username='$user_name' && password='$password'";
+	
+	    $result = mysqli_query($con, $query);
+	
+	    $num = mysqli_num_rows($result);
+         
+
+            if($num == 1){
+                header("Location: Home.php");
+			    die; 
+				each("success");
+            }else{
+                header("Location: note.php");
+				each("Fail");
+               
+            }
+	
+?>
